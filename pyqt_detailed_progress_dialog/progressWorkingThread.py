@@ -14,6 +14,6 @@ class ProgressWorkingThread(QThread):
     def run(self):
         for i in range(len(self.__filenames)):
             filename = self.__filenames[i]
-            shutil.copy(filename, 'dst')
+            shutil.copy(filename, './dst')
             self.updateCount.emit(i+1)
             self.updatePastedFile.emit(os.path.basename(filename))
