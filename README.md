@@ -15,7 +15,7 @@ Main operation of this dialog is <b>copy and paste</b> the files. You can give f
 ## Usage
 * ```canceled``` signal is emitted when the cancel button is clicked. This is connected to the close() method by default.
 * ```completed``` signal is emitted when operation is finished.
-* Main class is DetailedProgressDialog. You can construct it like ```DetailedProgressDialog(filenames: list)```.
+* Main class is DetailedProgressDialog. You can construct it as ```DetailedProgressDialog(filenames: list)```.
 
 ## Example
 Code Sample
