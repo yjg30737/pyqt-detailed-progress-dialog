@@ -71,7 +71,7 @@ Result
 
 https://user-images.githubusercontent.com/55078043/150727857-2efcf017-82e9-4292-948d-ab45047b1c8d.mp4
 
-This video is incomplete. I can tell you why.
+This video is incomplete. It should've shown the progression completely, from 0% to 100%. But it failed. I can tell you why.
 
 First, i can't help but start in the middle of progress. Because i don't know how to start the record the video immediately when i run certain script.
 
