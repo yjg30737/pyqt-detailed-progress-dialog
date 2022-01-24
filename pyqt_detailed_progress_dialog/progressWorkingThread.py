@@ -1,4 +1,4 @@
-import shutil
+import shutil, os
 
 from PyQt5.QtCore import QThread, pyqtSignal
 
