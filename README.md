@@ -15,6 +15,7 @@ Main operation of this dialog is <b>copy and paste</b> the files. You can give f
 ## Usage
 * ```canceled``` signal is emitted when the cancel button is clicked. This is connected to the close() method by default.
 * ```completed``` signal is emitted when operation is finished.
+* ```show()``` start the copy and paste operation. Dialog will show up and you can clearly see that QProgressBar and QListWidget do their job.
 * Main class is DetailedProgressDialog. Constructor's format is ```DetailedProgressDialog(filenames: list)```.
 
 ## Example
@@ -69,6 +70,14 @@ if __name__ == "__main__":
 Result
 
 https://user-images.githubusercontent.com/55078043/150727857-2efcf017-82e9-4292-948d-ab45047b1c8d.mp4
+
+This video is incomplete. I can tell you why.
+
+First, i can't help but start in the middle of progress. Because i don't know how to start the record the video immediately when i run certain script.
+
+Second, when i clicked the hide button to hide the QListWidget, it make the video stop somehow. I don't know why that happened.
+
+Sorry for that.
 
 
 
