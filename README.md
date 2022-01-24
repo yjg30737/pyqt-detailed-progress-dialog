@@ -1,5 +1,5 @@
 # pyqt-detailed-progress-dialog
-PyQt Detailed Progress Dialog
+PyQt Detailed Progress Dialog (Show the download/copy&paste progress in detail with QListWidget like adding the filename on QListWidget right after it was pasted)
 
 ## Requirements
 * PyQt5 >= 5.15
