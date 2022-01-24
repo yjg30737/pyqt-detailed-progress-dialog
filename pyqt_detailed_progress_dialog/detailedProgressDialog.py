@@ -34,7 +34,6 @@ class DetailedProgressDialog(QDialog):
         self.__showInDetailBtn = QPushButton('Show Detail')
         self.__showInDetailBtn.setCheckable(True)
         self.__showInDetailBtn.toggled.connect(self.__showInDetail)
-        self.__showInDetailBtn.toggle()
 
         lay = QHBoxLayout()
         lay.addWidget(self.__showInDetailBtn)
@@ -63,6 +62,8 @@ class DetailedProgressDialog(QDialog):
 
         self.__detailWidget = QListWidget()
         self.__detailWidget.setVisible(False)
+
+        self.__showInDetailBtn.toggle()
 
         line = QFrame()
         line.setFrameShape(QFrame.HLine)
