@@ -21,7 +21,7 @@ class MainWindow(QMainWindow):
         self.__initUi()
 
     def __initUi(self):
-        downloadStartBtn = QPushButton()
+        downloadStartBtn = QPushButton('Start the download')
         downloadStartBtn.clicked.connect(self.__download)
         self.setCentralWidget(downloadStartBtn)
 
@@ -57,5 +57,10 @@ if __name__ == "__main__":
 ```
 
 Result
+
+https://user-images.githubusercontent.com/55078043/150727857-2efcf017-82e9-4292-948d-ab45047b1c8d.mp4
+
+
+
 
 
