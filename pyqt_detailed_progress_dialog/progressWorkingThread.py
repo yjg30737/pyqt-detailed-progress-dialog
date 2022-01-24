@@ -13,7 +13,10 @@ class ProgressWorkingThread(QThread):
 
     def run(self):
         dirname = 'dst'
-        os.mkdir(dirname)
+        if os.path.exists(dirname):
+            pass
+        else:
+            os.mkdir(dirname)
         for i in range(len(self.__filenames)):
             filename = self.__filenames[i]
             shutil.copy(filename, os.path.join(os.getcwd(), dirname))
