@@ -7,7 +7,6 @@ from pyqt_detailed_progress_dialog.progressWorkingThread import ProgressWorkingT
 
 
 class DetailedProgressDialog(QDialog):
-    timeout = pyqtSignal()
     canceled = pyqtSignal()
     completed = pyqtSignal()
 
