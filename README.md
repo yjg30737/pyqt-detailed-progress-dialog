@@ -7,6 +7,16 @@ PyQt Detailed Progress Dialog (Show the download/copy&paste progress in detail w
 ## Setup
 ```pip3 install git+https://github.com/yjg30737/pyqt-detailed-progress-dialog.git --upgrade```
 
+## Description
+This dialog's UI mainly consists of <b>QProgressBar</b>, <b>QListWidget</b>. QProgressBar shows how much an operation is being progressed, QListWidget shows the pasted filename like installed files list. QListWidget can be hidden by clicking the show/hide detail toggle button. 
+
+Main operation of this dialog is <b>copy and paste</b> the files. You can give filenames which you want to copy to constructor. Then ```ProgressWorkingThread(QThread)``` which is connected with dialog will do the copy and paste operation.
+
+## Usage
+* ```canceled``` signal is emitted when the cancel button is clicked. This is connected to the close() method by default.
+* ```completed``` signal is emitted when operation is finished.
+* Main class is DetailedProgressDialog. You can construct it like ```DetailedProgressDialog(filenames: list)```.
+
 ## Example
 Code Sample
 ```python
@@ -26,15 +36,15 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(downloadStartBtn)
 
     def getAllFilesInPath(self, pathname):
-        rel_path_lst = []
+        path_lst = []
         for path, dir, files in os.walk(pathname):
             for filename in files:
-                rel_path = os.path.join(path, filename)
-                rel_path_lst.append(rel_path)
-        return rel_path_lst
+                path_filename = os.path.join(path, filename)
+                path_lst.append(path_filename)
+        return path_lst
 
     def __download(self):
-        filenames = self.getAllFilesInPath(os.path.join(os.path.dirname(__file__), 'src'))
+        filenames = self.getAllFilesInPath(os.path.join(os.path.dirname(__file__), 'src')) # Get all the filenames list in certain directory
         self.__dialog = DetailedProgressDialog(filenames)
         self.__dialog.canceled.connect(self.cancel)
         self.__dialog.completed.connect(self.complete)
