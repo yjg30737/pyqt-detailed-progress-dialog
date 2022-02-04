@@ -18,7 +18,7 @@ class DetailedProgressDialog(QDialog):
         self.__initUi()
 
     def __initUi(self):
-        self.setWindowTitle('Downloading...')
+        self.setWindowTitle('Downloading')
         self.setWindowFlags(Qt.WindowCloseButtonHint)
 
         self.__progressBar = QProgressBar()
