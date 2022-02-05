@@ -1,4 +1,3 @@
-from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QDialog, QVBoxLayout, QPushButton, QHBoxLayout, QWidget, QFrame, QListWidget, \
     QProgressBar
 from PyQt5.QtCore import Qt, pyqtSignal
@@ -23,6 +22,7 @@ class DetailedProgressDialog(QDialog):
 
         self.__progressBar = QProgressBar()
         self.__progressBar.setRange(self.__min, self.__max)
+        self.__progressBar.setStyleSheet('QProgressBar { text-align: center; }')
 
         lay = QVBoxLayout()
         lay.addWidget(self.__progressBar)
